@@ -6,14 +6,16 @@ block content
 
         form(action="/new" method="post")
             div.form-group
-                label(for="user") User:
-                input(type="text" name="user" id="user" class="form-control")
+                label(for="user") Your Name:
+                input(type="text" name="user" id="user" placeholder="Your Name" required maxlength="2000")
 
             div.form-group
-                label(for="text") Text:
-                input(type="text" name="text" id="text" class="form-control")
+                label(for="text") Your Message:
+                textarea(name="text" id="text" placeholder="Your Message" required maxlength="2000" rows="4")
 
             input(type="hidden" name="added" value=added)
 
             div.form-group
-                button(type="submit" class="btn btn-primary") Send Message
+                button(type="submit") Send Message
+        button(type="button") 
+            a(href="/") Return to Home

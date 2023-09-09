@@ -20,6 +20,17 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
+
+        textarea {
+            font-family: inherit;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: none;
+        }
+
         button[type="submit"] {
             background-color: #3498db;
             color: #fff;
@@ -31,6 +42,25 @@
             &:hover {
                 background-color: #2980b9;
             }
+        }
+    }
+
+    button[type="button"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: #45a049;
         }
     }
 }

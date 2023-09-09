@@ -85,6 +85,15 @@
   border-radius: 5px;
   box-sizing: border-box;
 }
+.new .form-group textarea {
+  font-family: inherit;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
 .new .form-group button[type=submit] {
   background-color: #3498db;
   color: #fff;
@@ -96,6 +105,22 @@
 }
 .new .form-group button[type=submit]:hover {
   background-color: #2980b9;
+}
+.new button[type=button] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.new button[type=button] a {
+  text-decoration: none;
+  color: #fff;
+}
+.new button[type=button]:hover {
+  background-color: #45a049;
 }
 
 * {
