@@ -7,7 +7,11 @@ import {
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("form", { added: new Date() });
+    const timestamp = new Date().toISOString();
+    const dateObj = new Date(timestamp);
+    const formattedDate = dateObj.toString();
+
+    res.render("form", { added: formattedDate });
 });
 
 router.post("/", async (req, res) => {
