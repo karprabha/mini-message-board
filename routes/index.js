@@ -4,7 +4,7 @@ import { readMessages } from "../controllers/messagesController.js";
 const router = express.Router();
 
 const formatCustomDate = (date) => {
-    return `(${date.toString()})`;
+    return `${date.toString()}`;
 };
 
 router.get("/", async (req, res) => {
