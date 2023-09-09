@@ -26,11 +26,13 @@
 .home ul {
   width: 100%;
   max-width: 800px;
+  max-height: 65vh;
   list-style: none;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: auto;
 }
 .home ul li {
   padding: 0 10px;
