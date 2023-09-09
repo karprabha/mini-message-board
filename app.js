@@ -5,6 +5,9 @@ import cookieParser from "cookie-parser";
 import logger from "morgan";
 import mongoose from "mongoose";
 import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,10 +22,9 @@ app.set("view engine", "pug");
 
 // Mongoose
 mongoose.set("strictQuery", false);
-const mongoDBURL = "mongodb://127.0.0.1:27017/mini-message-board";
 
 const connectDB = async () => {
-    return await mongoose.connect(mongoDBURL);
+    return await mongoose.connect(process.env.MONGODB_URI);
 };
 
 connectDB().catch((err) => console.log(err));
