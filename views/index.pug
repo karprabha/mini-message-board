@@ -1,11 +1,14 @@
 extends layout
 
 block content
-    h1= title
-    h3
-        a(href="/new") New Message 
-    ul
-        each message in messages 
-            li
-                span= message.user +' '+ message.added
-                p= message.text
+    div.home
+        h1(class="title")= title
+        button(type="button" class="new-message-button")
+            a(href="/new") Add Message
+        ul
+            each message in messages
+                li(class="message-item")
+                    div.message-info
+                        span(class="user")= message.user
+                        span(class="time-added")= ' (' + message.added + ')'
+                    p(class="message-text")= message.text

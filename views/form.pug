@@ -1,8 +1,19 @@
 extends layout
 
-block content 
-    form(action="/new" method="post") 
-        input(type="text" name="user")
-        input(type="text" name="text")
-        input(type="hidden" name="added" value= added)
-        button(type="submit") Send Message
+block content
+    div.new
+        h1 Message Form
+
+        form(action="/new" method="post")
+            div.form-group
+                label(for="user") User:
+                input(type="text" name="user" id="user" class="form-control")
+
+            div.form-group
+                label(for="text") Text:
+                input(type="text" name="text" id="text" class="form-control")
+
+            input(type="hidden" name="added" value=added)
+
+            div.form-group
+                button(type="submit" class="btn btn-primary") Send Message
