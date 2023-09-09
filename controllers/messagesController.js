@@ -1,26 +1,18 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const filePath = path.join(__dirname, "../models/messages.json");
+import Message from "../models/message.js";
 
 const readMessages = async () => {
     try {
-        const data = await fs.promises.readFile(filePath, "utf8");
-        return JSON.parse(data);
+        return await Message.find().exec();
     } catch (err) {
         console.error("Error reading messages:", err);
         return [];
     }
 };
 
-const writeMessages = async (messages) => {
+const writeMessages = async (newObj) => {
     try {
-        const newData = JSON.stringify(messages);
-        await fs.promises.writeFile(filePath, newData, "utf8");
+        const newMessage = new Message(newObj);
+        await newMessage.save();
         console.log("Messages saved successfully.");
     } catch (err) {
         console.error("Error writing messages:", err);
