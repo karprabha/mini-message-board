@@ -2,3 +2,10 @@ extends layout
 
 block content
     h1= title
+    h3
+        a(href="/new") New Message 
+    ul
+        each message in messages 
+            li
+                span= message.user +' '+ message.added
+                p= message.text

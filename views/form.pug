@@ -1,0 +1,8 @@
+extends layout
+
+block content 
+    form(action="/new" method="post") 
+        input(type="text" name="user")
+        input(type="text" name="text")
+        input(type="hidden" name="added" value= added)
+        button(type="submit") Send Message
