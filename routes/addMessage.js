@@ -4,7 +4,7 @@ import { writeMessages } from "../controllers/messagesController.js";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("form", { added: new Date() });
+    res.render("form", { title: "Mini Messageboard", added: new Date() });
 });
 
 router.post("/", async (req, res) => {
