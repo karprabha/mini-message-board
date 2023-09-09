@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 import indexRouter from "./routes/index.js";
-import newRouter from "./routes/new.js";
+import addMessageRouter from "./routes/addMessage.js";
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/new", newRouter);
+app.use("/add-message", addMessageRouter);
 
 app.use((req, res, next) => {
     next(createError(404));

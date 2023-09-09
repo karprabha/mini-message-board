@@ -64,30 +64,30 @@
   overflow: auto;
 }
 
-.new {
+.add-message {
   max-width: 400px;
   margin: 0 auto;
 }
-.new h1 {
+.add-message h1 {
   text-align: center;
   margin-bottom: 20px;
 }
-.new .form-group {
+.add-message .form-group {
   margin-bottom: 20px;
 }
-.new .form-group label {
+.add-message .form-group label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.new .form-group input[type=text] {
+.add-message .form-group input[type=text] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
 }
-.new .form-group textarea {
+.add-message .form-group textarea {
   font-family: inherit;
   width: 100%;
   padding: 10px;
@@ -96,7 +96,7 @@
   box-sizing: border-box;
   resize: none;
 }
-.new .form-group button[type=submit] {
+.add-message .form-group button[type=submit] {
   background-color: #3498db;
   color: #fff;
   padding: 10px 20px;
@@ -105,10 +105,10 @@
   width: 100%;
   cursor: pointer;
 }
-.new .form-group button[type=submit]:hover {
+.add-message .form-group button[type=submit]:hover {
   background-color: #2980b9;
 }
-.new button[type=button] {
+.add-message button[type=button] {
   background-color: #4caf50;
   color: #fff;
   padding: 10px 20px;
@@ -117,11 +117,11 @@
   width: 100%;
   cursor: pointer;
 }
-.new button[type=button] a {
+.add-message button[type=button] a {
   text-decoration: none;
   color: #fff;
 }
-.new button[type=button]:hover {
+.add-message button[type=button]:hover {
   background-color: #45a049;
 }
 
